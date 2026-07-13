@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>회원가입 | marketKurly</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/join.css">
+    <script src="./scripts/join.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header> 
+            <!-- 1행 광고 띠배너 -->
+            <div class="top_bnr_bg">
+                <div class="top_bnr"><!-- 글씨+x= 닫는 창까지가 너비가 가운데 있는 걸 알려줌 -->
+                    <a href="#" class="ad_text">지금 가입하고 <em>최대 1만 2천원 할인 쿠폰</em> 받아가세요!</a>
+                    <button type="button" id="ad_close_btn"><img src="#" alt="광고닫기"></button>
+                </div>
+            </div>
+            <!-- 2행 로고+가입+로그인+고객센터 -->
+            <div class="logo_user_menu">
+                <h1><a href="./index.html"><img src="./image/logo.svg" alt="마켓컬리"></a></h1>
+                <ul class="snb">
+                    <li><a href="./join.html">회원가입</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">고객센터</a>
+                        <ul class="lnb">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주하는질문</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                            <li><a href="#">대량주문문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <h1>회원가입</h1>
+            <form action="" method="post" id="join_frm">
+                <div class="law">
+                    <h2>인터넷 쇼핑몰『 웹컬리 사이버 몰』회원 약관</h2>
+                    <dl>
+                        <dt>제1조(목적)</dt><!-- 제목 -->
+                        <dd>이 약관은 웹컬리 회사(전자상거래 사업자)가 운영하는 웹컬리 사이버 몰(이하 "몰"이라 한다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를 이용함에 있어 사이버 몰과 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.</dd>
+                        <dd>* 「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」</dd>
+                        <dt>제2조(정의)</dt><!-- 제목 -->
+                        <dd>①"몰" 이란 웹컬리 회사가 재화 또는 용역(이하 "재화등"이라 함)을 이용자에게 제공하기 위하여 컴퓨터등 정보통신설비를 이용하여 재화등을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이버몰을 운영하는 사업자의 의미로도 사용합니다.</dd>
+                        <dd>②"이용자"란 "몰"에 접속하여 이 약관에 따라 "몰"이 제공하는 서비스를 받는 회원 및 비회원을 말합니다.</dd>
+                    </dl>
+                </div>
+                <dl class="join_list">
+                    <dt>아이디<span class="important">*</span></dt>
+                    <dd>
+                        <input type="id" placeholder="아이디를 입력해주세요." name="id_compart" id="id_compart" required autofocus>
+                        <button type="button" id="check_btn">중복확인</button>
+                    </dd>
+                    <dt>비밀번호<span class="important">*</span></dt>
+                    <dd>
+                        <input type="password" placeholder="비밀번호를 입력해주세요." name="pw_compart" id="pw_compart" required>
+                    </dd>
+                    <dt>비밀번호확인<span class="important">*</span></dt>
+                    <dd>
+                        <input type="password" placeholder="비밀번호를 한 번 더 입력해주세요." name="pw_check_compart" id="pw_check_compart"  required>
+                    </dd>
+                    <dt>이름<span class="important">*</span></dt>
+                    <dd>
+                        <input type="text" placeholder="이름을 입력해주세요." name="name_compart" id="name_compart"  required>
+                    </dd>
+                    <dt>이메일<span class="important">*</span></dt>
+                    <dd>
+                        <input type="email" placeholder="예) abc@web.com" name="email_compart" id="email_compart"  required>
+                    </dd>
+                    <!-- --------------------------------------------휴대폰 -->
+                    <dt>휴대폰<span class="important">*</span></dt>
+                    <dd>
+                        <select name="agency" id="agency">
+                            <option value="kt">KT</option>
+                            <option value="sk">SK</option>
+                            <option value="lgu">LGU+</option>
+                        </select>
+                        <input type="number" placeholder="숫자만 입력해주세요. 예) 0101234568" name="number_compart" id="number_compart" required>
+                        <button type="button" id="check_btn">인증번호받기</button>
+                    </dd>
+                    <!-- --------------------------------------------주소 -->
+                    <dt>주소<span class="important">*</span></dt>
+                    <dd>
+                        <a href="#" class="address_btn">주소검색</a>
+                        <p>배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+                    </dd>
+                    <!-- --------------------------------------------성별 -->
+                    <dt>성별</dt>
+                    <dd>
+                        <input type="radio" name="gender" value="male" id="male">
+                        <label for="male">남자</label>
+                        <input type="radio" name="gender" value="female" id="female">
+                        <label for="female">여자</label>
+                        <input type="radio" name="gender" value="none" id="none">
+                        <label for="none">선택안함</label>
+                    </dd>
+                    <!-- --------------------------------------------생년월일 -->
+                </dl>
+                <p><button type="button" join_btn>가입하기</button></p>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
