@@ -1,0 +1,163 @@
+/* join.css */
+#wrap main {
+    width: var(--width-container-sm);
+    margin: 0 auto;
+    position: relative;
+}
+#wrap main h1 {text-align: center; font-weight: var(--font-weight-semibold);}
+#wrap main #join_frm {}
+/* ---------------------------회원가입약관 */
+#wrap main #join_frm .law {
+    background-color: var(--bg-disable);
+    padding: var(--padding-md);
+    height: 159px; overflow: auto;
+}
+#wrap main #join_frm .law * {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-md);
+}
+#wrap main #join_frm .law h2 {}
+#wrap main #join_frm .law dl {}
+#wrap main #join_frm .law dl dt {}
+#wrap main #join_frm .law dl dt dd {}
+/* ---------------------------회원가입정보 */
+#wrap main #join_frm .join_list {
+    /* background-color: pink; */
+    display: flex;
+    flex-flow: row wrap;
+    margin: var(--spacing-lg);
+}
+#wrap main #join_frm .join_list dt {
+    width: var(--width-title);
+    font-size: var(--font-size-sm);
+
+}
+#wrap main #join_frm .join_list dt .important {
+    color: var(--color-warning);
+    width: var(--width-title);
+} /* 필수표시 */
+#wrap main #join_frm .join_list dd {
+    margin-bottom: var(--spacing-sm);
+    /* width: 490px; */
+    /* css 값 계산 시 calc() 함수를 활용해서 계산가능 */
+    /* calc() 함수 작성 시 주의 할 점 : 산술연산자 좌/우 한칸 공백필요 */
+    width: calc(100% - 150px);
+    /* 부모(100%) 너비에서 형제 150px을 뺀 나머지값을 dd에 적용 */
+}
+/* ---------------------------아이디~번호까지 공통 디자인 */
+#wrap main #join_frm .join_list dd> input[placeholder] {
+    background-color: var(--bg-basic);
+    width: var(--width-input);
+    height: var(--height-button);
+    border-radius: var(--radius-xs);
+    padding-left: var(--padding-input);
+    font-size: var(--font-size-xs);
+    color: var(--color-placeholder);
+    border: 1px solid var(--border-color);
+}
+#wrap main #join_frm .join_list> dd:nth-child(6) {}
+/* ---------------------------아이디~비밀번호확인 */
+#wrap main #join_frm .join_list dd #user_id {}
+#wrap main #join_frm .join_list dd #check_btn {
+    background-color: var(--color-primary);
+    width: var(--width-button);
+    height: var(--height-button);
+    color: var(--bg-basic);
+    border-radius: var(--radius-xs);
+    font-size: var(--font-size-xs);
+    position: absolute; right: 0;
+}
+#wrap main #join_frm .join_list dd #user_pw {}
+#wrap main #join_frm .join_list dd #user_pw_chk {}
+/* ---------------------------이름~이메일 */
+#wrap main #join_frm .join_list dd #user_name {}
+#wrap main #join_frm .join_list dd #user_email {}
+/* ---------------------------휴대폰 */
+#wrap main #join_frm .join_list dd #agency {
+    background-image: url(../image/arrow_d.svg);
+    background-repeat: no-repeat;
+    width: 45px; height: var(--height-button);
+    border-radius: var(--radius-xs);
+    font-size: var(--font-size-xs);
+    border: 1px solid var(--border-color);
+    padding-left: var(--spacing-xs);
+    background-position: 80% center;
+    font-size: var(--font-size-xs);
+}
+#wrap main #join_frm .join_list dd #user_num {
+    width: 250px;
+}
+#wrap main #join_frm .join_list dd #num_btn {
+    background-color: var(--color-btn);
+    width: var(--width-button);
+    height: var(--height-button);
+    color: var(--color-placeholder);
+    border-radius: var(--radius-xs);
+    font-size: var(--font-size-xs);
+    position: absolute; right: 0;
+}
+/* ---------------------------주소 */
+#wrap main #join_frm .join_list dd .address_search {
+    display: block;
+    background-color: var(--bg-basic);
+    border-radius: var(--radius-xs);
+    width: var(--width-input);
+    line-height: var(--height-button);
+    text-align: center;
+    font-size: var(--font-size-xs);
+    border: 1px solid var(--color-primary);
+}
+#wrap main #join_frm .join_list dd p {
+    margin-top: 2px;
+    font-size: var(--font-size-xs);
+}
+/* ---------------------------성별 */
+#wrap main #join_frm .join_list dd input[name=gender] {
+    display: none;
+}
+#wrap main #join_frm .join_list dd input[name=gender]:checked + label { /* 선택된 상태 */
+    background-image: url(../image/chk_on.svg);
+    background-repeat: no-repeat;
+}
+#wrap main #join_frm .join_list dd input[name=gender]+label { /* 선택되지 않은 기본 상태 */
+    background-image: url(../image/chk_off.svg);
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    background-position: left center;
+    font-size: var(--font-size-xs);
+}
+#wrap main #join_frm .join_list dd input[name=gender]+label:nth-child(2) {
+    margin-left: 90px; line-height: var(--height-button);
+}
+/* ---------------------------생년월일 */
+#wrap main #join_frm .join_list dd .birthday {
+    width: var(--width-input); height: var(--height-button);
+    border: 1px solid var(--color-primary);
+    display: flex; align-items: center; justify-content: center;
+}
+#wrap main #join_frm .join_list dd .birthday li {
+    display: flex;
+}
+#wrap main #join_frm .join_list dd .birthday li input {}
+#wrap main #join_frm .join_list dd .birthday li::after {
+    content: '/';
+    margin: 0 12px; color: var(--color-placeholder); font-size: var(--font-size-xs); padding-top: 2px;
+}
+#wrap main #join_frm .join_list dd .birthday li:nth-child(3)::after {display: none;}
+#wrap main #join_frm .join_list dd .birthday li input[name*=user] {font-size: var(--font-size-xs);}
+#wrap main #join_frm .join_list dd .birthday li input[name*=y] {width: 32px;}
+#wrap main #join_frm .join_list dd .birthday li input[name*=m] {width: 21px;}
+#wrap main #join_frm .join_list dd .birthday li input[name*=d] {width: 21px;}
+/* ---------------------------가입버튼 */
+#wrap main #join_frm .join_list + p {
+    text-align: center;
+}
+#wrap main #join_frm .join_list + p #join_btn{
+    background-color: var(--color-primary);
+    width: var(--width-button);
+    height: var(--height-button);
+    width: var(--width-title);
+    color: var(--bg-basic);
+    border-radius: var(--radius-xs);
+    font-size: var(--font-size-xs);
+}

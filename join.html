@@ -8,6 +8,7 @@
     <title>회원가입 | marketKurly</title>
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/var.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/join.css">
     <script src="./scripts/join.js"></script>
@@ -56,24 +57,24 @@
                 <dl class="join_list">
                     <dt>아이디<span class="important">*</span></dt>
                     <dd>
-                        <input type="id" placeholder="아이디를 입력해주세요." name="id_compart" id="id_compart" required autofocus>
+                        <input type="id" placeholder="아이디를 입력해주세요." name="user_id" id="user_id" required autofocus>
                         <button type="button" id="check_btn">중복확인</button>
                     </dd>
                     <dt>비밀번호<span class="important">*</span></dt>
                     <dd>
-                        <input type="password" placeholder="비밀번호를 입력해주세요." name="pw_compart" id="pw_compart" required>
+                        <input type="password" placeholder="비밀번호를 입력해주세요." name="user_pw" id="user_pw" required>
                     </dd>
                     <dt>비밀번호확인<span class="important">*</span></dt>
                     <dd>
-                        <input type="password" placeholder="비밀번호를 한 번 더 입력해주세요." name="pw_check_compart" id="pw_check_compart"  required>
+                        <input type="password" placeholder="비밀번호를 한 번 더 입력해주세요." name="user_pw_chk" id="user_pw_chk"  required>
                     </dd>
                     <dt>이름<span class="important">*</span></dt>
                     <dd>
-                        <input type="text" placeholder="이름을 입력해주세요." name="name_compart" id="name_compart"  required>
+                        <input type="text" placeholder="이름을 입력해주세요." name="user_name" id="user_name"  required>
                     </dd>
                     <dt>이메일<span class="important">*</span></dt>
                     <dd>
-                        <input type="email" placeholder="예) abc@web.com" name="email_compart" id="email_compart"  required>
+                        <input type="email" placeholder="예) abc@web.com" name="user_email" id="user_email"  required>
                     </dd>
                     <!-- --------------------------------------------휴대폰 -->
                     <dt>휴대폰<span class="important">*</span></dt>
@@ -83,28 +84,37 @@
                             <option value="sk">SK</option>
                             <option value="lgu">LGU+</option>
                         </select>
-                        <input type="number" placeholder="숫자만 입력해주세요. 예) 0101234568" name="number_compart" id="number_compart" required>
-                        <button type="button" id="check_btn">인증번호받기</button>
+                        <input type="number" placeholder="숫자만 입력해주세요. 예) 0101234568" name="user_num" id="user_num" required>
+                        <button type="button" id="num_btn">인증번호받기</button>
                     </dd>
                     <!-- --------------------------------------------주소 -->
                     <dt>주소<span class="important">*</span></dt>
                     <dd>
-                        <a href="#" class="address_btn">주소검색</a>
+                        <a href="#" class="address_search">주소 검색</a>
                         <p>배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
                     </dd>
                     <!-- --------------------------------------------성별 -->
                     <dt>성별</dt>
-                    <dd>
+                    <dd class="gender_g">
                         <input type="radio" name="gender" value="male" id="male">
                         <label for="male">남자</label>
-                        <input type="radio" name="gender" value="female" id="female">
+                        <input type="radio" name="gender" value="female" id="female" checked>
+                        <!-- 같은 그룹(선택양식의 name) 기준으로 checked는 주 고객(페르소나)에 맞춰서 기본성택상태 권장 -->
                         <label for="female">여자</label>
-                        <input type="radio" name="gender" value="none" id="none">
-                        <label for="none">선택안함</label>
+                        <input type="radio" name="gender" value="gender_none" id="gender_none">
+                        <label for="gender_none">선택안함</label>
                     </dd>
                     <!-- --------------------------------------------생년월일 -->
+                    <dt>생년월일</dt>
+                    <dd>
+                        <ul class="birthday">
+                            <li><input type="text" name="user_year" id="user_year" placeholder="YYYY"></li>
+                            <li><input type="text" name="user_month" id="user_month" placeholder="MM"></li>
+                            <li><input type="text" name="user_day" id="user_day" placeholder="DD"></li>
+                        </ul>
+                    </dd>
                 </dl>
-                <p><button type="button" join_btn>가입하기</button></p>
+                <p><button type="button" id="join_btn">가입하기</button></p>
             </form>
         </main>
     </div>
